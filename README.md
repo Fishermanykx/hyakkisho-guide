@@ -15,7 +15,7 @@
 
 GitHub Free 支持公开仓库的 Pages，参见 https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages 。没有使用付费服务，也不需要自定义域名。
 
-本次已按要求建立本地 Git 仓库，尚未关联远程仓库或发布公网网站。本地成品可直接上传。
+项目远程仓库：https://github.com/Fishermanykx/hyakkisho-guide 。本地分支为 `main`。推送源码不等于启用 GitHub Pages，网站托管需按上述步骤开启。
 
 ## 内容维护
 

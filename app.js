@@ -25,4 +25,3 @@ if (/\/(?:index\.html)?$/.test(location.pathname)) {
  if (legacyPages.includes(section)) location.replace(section + '.html');
  else if (/^source-[15]$/.test(section)) location.replace('sources.html#' + section);
 }
-

@@ -19,9 +19,13 @@ function render(filter){const items=editions.filter(x=>filter==='all'||x.kind===
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});render(button.dataset.filter);}));
 if (grid) render('all');
 // Preserve links shared before the site was split into separate pages.
+function openLegacyChapter() {
 if (/\/(?:index\.html)?$/.test(location.pathname)) {
  const legacyPages = ['about','characters','editions','gifts','start','sources'];
  const section = location.hash.slice(1);
  if (legacyPages.includes(section)) location.replace(section + '.html');
  else if (/^source-[15]$/.test(section)) location.replace('sources.html#' + section);
 }
+}
+openLegacyChapter();
+window.addEventListener("hashchange", openLegacyChapter);

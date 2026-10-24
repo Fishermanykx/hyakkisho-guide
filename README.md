@@ -20,7 +20,7 @@ GitHub Free 支持公开仓库的 Pages，参见 https://docs.github.com/en/page
 ## 内容维护
 
 - 页面：`index.html`（卷首）、`about.html`（入馆）、`characters.html`（双子）、`editions.html`（历代外观）、`gifts.html`（周边）、`start.html`（新访客）、`sources.html`（文献）。
-- 各章节使用独立 URL，可直接打开、刷新或收藏；顶部导航标出当前页，底部可前后翻页。旧首页章节锚点自动转到对应新页面。
+- 各章节使用独立 URL，可直接打开、刷新或收藏；顶部图标标签栏直接切换页面并标出当前栏目，不再显示底部章节翻页。旧首页章节锚点自动转到对应新页面。
 - 角色、周边与来源：修改对应章节 HTML；共用导航和页脚修改时需同步各页。
 - 外观卡片：修改 `app.js` 中的 `editions`，分类为 `story`、`season`、`plan`。
 - 主题与响应式布局：修改 `style.css`。

@@ -17,4 +17,12 @@ const editions = [
 const grid=document.getElementById('edition-grid');
 function render(filter){const items=editions.filter(x=>filter==='all'||x.kind===filter);grid.innerHTML=items.map((x,i)=>`<article class="edition"><div class="edition-art art-${x.kind}" aria-hidden="true"><span>${x.symbol}</span><i></i><small>百姬馆 / 藏卷</small></div><div class="edition-copy"><p class="eyebrow">${x.label}</p><h3>${x.name}</h3><p>${x.desc}</p><small class="edition-note">${x.note}</small><a class="text-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查阅原始资料 ↗</a></div></article>`).join('');document.getElementById('result-count').textContent=`显示 ${items.length} 条外观与剧情记录`;}
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button));});render(button.dataset.filter);}));
-render('all');
+if (grid) render('all');
+// Preserve links shared before the site was split into separate pages.
+if (/\/(?:index\.html)?$/.test(location.pathname)) {
+ const legacyPages = ['about','characters','editions','gifts','start','sources'];
+ const section = location.hash.slice(1);
+ if (legacyPages.includes(section)) location.replace(section + '.html');
+ else if (/^source-[15]$/.test(section)) location.replace('sources.html#' + section);
+}
+

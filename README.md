@@ -9,17 +9,19 @@
 ## 免费发布到 GitHub Pages
 
 1. 在你自己的 GitHub 账户创建公开仓库，例如 `hyakkisho-guide`。
-2. 将 `index.html`、`style.css`、`app.js` 和 `.nojekyll` 上传到仓库主分支根目录。
+2. 将全部 `.html` 页面、`style.css`、`app.js` 和 `.nojekyll` 上传到仓库主分支根目录。
 3. 仓库 Settings → Pages → Build and deployment → Deploy from a branch，选择 `main` 与 `/ (root)` 后保存。
 4. 等待 Pages 部署完成，地址通常为 `https://你的用户名.github.io/hyakkisho-guide/`。
 
 GitHub Free 支持公开仓库的 Pages，参见 https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages 。没有使用付费服务，也不需要自定义域名。
 
-项目远程仓库：https://github.com/Fishermanykx/hyakkisho-guide 。本地分支为 `main`。推送源码不等于启用 GitHub Pages，网站托管需按上述步骤开启。
+项目远程仓库：https://github.com/Fishermanykx/hyakkisho-guide 。本地分支为 `main`。GitHub Pages 已启用，站点地址：https://fishermanykx.github.io/hyakkisho-guide/ 。推送到 `main` 后会自动部署。
 
 ## 内容维护
 
-- 角色、周边与来源：修改 `index.html`。
+- 页面：`index.html`（卷首）、`about.html`（入馆）、`characters.html`（双子）、`editions.html`（历代外观）、`gifts.html`（周边）、`start.html`（新访客）、`sources.html`（文献）。
+- 各章节使用独立 URL，可直接打开、刷新或收藏；顶部导航标出当前页，底部可前后翻页。旧首页章节锚点自动转到对应新页面。
+- 角色、周边与来源：修改对应章节 HTML；共用导航和页脚修改时需同步各页。
 - 外观卡片：修改 `app.js` 中的 `editions`，分类为 `story`、`season`、`plan`。
 - 主题与响应式布局：修改 `style.css`。
 - 发布前更新整理日期，检查旧计划与周边状态。不要把“纪念回馈”改写为“现货在售”。

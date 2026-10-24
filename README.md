@@ -1,0 +1,35 @@
+# 百姬馆 · 纸间纪事
+
+百姫抄非官方资料导览。原生 HTML / CSS / JavaScript，无构建步骤、第三方依赖、追踪脚本或外部字体。装饰由 CSS 与内嵌 SVG 绘制，不是官方角色立绘。
+
+## 本地查看
+
+直接打开 `index.html`，或在此目录运行 `node server.cjs`，访问 http://localhost:4173 。筛选、导航和 FAQ 均可离线使用，来源链接需要联网。
+
+## 免费发布到 GitHub Pages
+
+1. 在你自己的 GitHub 账户创建公开仓库，例如 `hyakkisho-guide`。
+2. 将 `index.html`、`style.css`、`app.js` 和 `.nojekyll` 上传到仓库主分支根目录。
+3. 仓库 Settings → Pages → Build and deployment → Deploy from a branch，选择 `main` 与 `/ (root)` 后保存。
+4. 等待 Pages 部署完成，地址通常为 `https://你的用户名.github.io/hyakkisho-guide/`。
+
+GitHub Free 支持公开仓库的 Pages，参见 https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages 。没有使用付费服务，也不需要自定义域名。
+
+本次已按要求建立本地 Git 仓库，尚未关联远程仓库或发布公网网站。本地成品可直接上传。
+
+## 内容维护
+
+- 角色、周边与来源：修改 `index.html`。
+- 外观卡片：修改 `app.js` 中的 `editions`，分类为 `story`、`season`、`plan`。
+- 主题与响应式布局：修改 `style.css`。
+- 发布前更新整理日期，检查旧计划与周边状态。不要把“纪念回馈”改写为“现货在售”。
+
+## 资料范围与准确性
+
+整理日期为 2026-10-24。阅读账号公告、置顶 V7、自介和三套外观专栏，以及动态列表加载出的 2026-09-05 至 2026-10-24 内容。没有宣称穷尽所有历史动态。来源索引在网页末尾；近期动态尚未获取独立永久链接，所以提供列表入口、标题和日期方便回查。
+
+旧自介中“大正”与世纪年代不一致，网页仅整理事件顺序；夜樱名字采用较新的春夜剪樱专栏「夜错黑樱」。对计划中外观、延期状态、AI 绘制和领取条件作明确区分。页面仅以自主摘要介绍公开信息，不复制整篇文章或角色画稿。
+
+## Skill 与安全选择
+
+无需下载第三方前端 skill。已检查本地技能目录提供的能力，没有为静态站引入陌生脚本、npm 包、账号授权或付费服务。网站不收集个人资料、不发送请求获取 B 站数据、不包含动态 HTML 来源输入；外链均显式指向 B 站并隔离新窗口 opener。`server.cjs` 仅监听本机，限定可服务的文件。

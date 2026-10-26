@@ -1,6 +1,6 @@
 # 百姬馆 · 纸间纪事
 
-百姫抄非官方资料导览。原生 HTML / CSS / JavaScript，无构建步骤、第三方依赖、追踪脚本或外部字体。装饰由 CSS 与内嵌 SVG 绘制，不是官方角色立绘。
+百姫抄非官方、非商业粉丝向网站。包含新观众入坑路线、博主档案、角色关系、衣装、作品与幕后、周边记录和来源索引。原生 HTML / CSS / JavaScript，无运行时第三方依赖、追踪脚本或外部字体。文字封面和装饰不是官方角色立绘。结构参考栗妮亚_nini百科的公开资料组织方式，未复制参考站的文字、图片或代码。
 
 ## 本地查看
 
@@ -9,7 +9,7 @@
 ## 免费发布到 GitHub Pages
 
 1. 在你自己的 GitHub 账户创建公开仓库，例如 `hyakkisho-guide`。
-2. 将全部 `.html` 页面、`style.css`、`app.js` 和 `.nojekyll` 上传到仓库主分支根目录。
+2. 将全部 `.html` 页面、`style.css`、`app.js`、`fan.js`、`search-data.js` 和 `.nojekyll` 上传到仓库主分支根目录。
 3. 仓库 Settings → Pages → Build and deployment → Deploy from a branch，选择 `main` 与 `/ (root)` 后保存。
 4. 等待 Pages 部署完成，地址通常为 `https://你的用户名.github.io/hyakkisho-guide/`。
 
@@ -19,10 +19,12 @@ GitHub Free 支持公开仓库的 Pages，参见 https://docs.github.com/en/page
 
 ## 内容维护
 
-- 页面：`index.html`（卷首）、`about.html`（入馆）、`characters.html`（双子）、`editions.html`（历代外观）、`gifts.html`（周边）、`start.html`（新访客）、`sources.html`（文献）。
+- 页面：`index.html`（粉丝站首页）、`about.html`（博主档案与活动足迹）、`characters.html`（角色世界与关系）、`editions.html`（衣装档案）、`works.html`（作品与制作署名）、`gifts.html`（周边手记）、`start.html`（入坑指南）、`sources.html`（参考资料与本站说明）。
 - 各章节使用独立 URL，可直接打开、刷新或收藏；顶部图标标签栏直接切换页面并标出当前栏目，不再显示底部章节翻页。旧首页章节锚点自动转到对应新页面。
 - 角色、周边与来源：修改对应章节 HTML；共用导航和页脚修改时需同步各页。
 - 外观卡片：修改 `app.js` 中的 `editions`，分类为 `story`、`season`、`plan`。
+- 站内搜索：`fan.js`，数据为本地加载的 `search-data.js`，不发送搜索内容。编辑 HTML 或外观记录后运行 `node rebuild-search.cjs` 更新索引。支持 Ctrl/Cmd+K 或顶部搜索按钮。
+- 首页专题和搜索结果通过 `editions.html?look=名称` 把对应衣装置于首卡，不采用向下滚动定位。
 - 主题与响应式布局：修改 `style.css`。
 - 发布前更新整理日期，检查旧计划与周边状态。不要把“纪念回馈”改写为“现货在售”。
 
